@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumfunction(frm){
+            var n1 = parseInt(frm.num1.value);
+            var n2 = parseInt(frm.num2.value);
+            frm.sum.value = n1 + n2;
+            return frm.sum.value;
+
+        }
+    </script>
+<body>
+<form action="">
+    <table>
+    <input type="text" name="num1">+
+    <input type="text" name="num2">=
+    <input type="text" name="sum">
+    <input type="button" value="add" onclick="sumfunction(this.form)">
+</table>
+</form>    
+
+
+</body>
+</html>

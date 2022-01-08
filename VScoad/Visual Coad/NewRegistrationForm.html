@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            font: small;
+            color: red;
+        }
+    </style>
+    <script>
+        function validate(abc) {
+    var flag = true;
+    if (abc.fname.value == '') {
+        document.getElementById("fncheck").innerHTML = "First name is required*"
+        flag = false;
+    }
+    if (abc.lname.value == '') {
+        document.getElementById("lncheck").innerHTML = "Last name is required*"
+        flag = false;
+    }
+    if (abc.passw.value == '') {
+        document.getElementById("pscheck").innerHTML = "Password is required*"
+        flag = false;
+    }
+    if (abc.cnpass.value == '') {
+        document.getElementById("cncheck").innerHTML = "Password is required*"
+        flag = false;
+    }
+    if (abc.cnpass.value != abc.passw.value) {
+        document.getElementById("cncheck").innerHTML = "Password is not same*"
+        flag = false;
+    }
+    if (abc.mail.value == '') {
+        document.getElementById("mailheck").innerHTML = "Email id is required*"
+        flag = false;
+        
+    }
+    if (abc.dob.value == '') {
+        document.getElementById("dobcheck").innerHTML = "DOB is required*"
+        flag = false;
+    }
+ return flag;
+}
+    </script>
+</head>
+<body>
+    
+    <p style="float:right"><img src="Rays logo.png " >  </p>
+    <h4> Hi, Guest</h4>
+   <br>
+   <br>
+   <br>
+   <br>
+   <hr>
+
+   <h1>
+       <center><th> User Registration </th></h1></center>
+           <br>
+           <br>
+  <center><form onsubmit="return validate(this)">
+      <table>
+          <tr>
+      <td> First Name*</td> 
+      <td> <input type="text" name="fname"><span id=fncheck></span></td></tr>
+      <tr><td> Last Name*</td>
+      <td><input type="text" name="lname"><span id=lncheck></span></td></tr>
+      <tr>
+      <td> Login ID*</td>
+      <td><input type="email" name="mail"><span id=mailheck></span></td></tr>
+      <tr>
+      <td> Password*</td>
+      <td><input type="password" name="passw"><span id=pscheck></span></td> </tr>
+      <tr> <td> Confirm Password*</td>
+      <td><input type="password" name="cnpass"><span id=cncheck></span></td></tr>
+      <tr>
+      <td> Gender*</td>
+      <td><select>
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+        <option value="2">Other</option>
+    </select></td></tr>
+    
+    <tr><td> Date of Birth*</td>
+        <td> <input type="date" name="dob"><span id=dobcheck></span></td></tr>
+      <tr>
+          <td></td><td><input type="submit" value="Submit" ></td></tr>
+    </table>
+  </form> </center>    
+  <hr>
+<h5> <center> © Copyright SunilOS Infotech Pvt Ltd.</center> </h5>
+    
+</body>
+</html>

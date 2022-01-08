@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function validate(frm) {
+      var flag = true;
+      if (form.fname.value == '') {
+        document.getElementById("fspan").innerHTML = "fname is required";
+        flag = false;
+      }
+      if (form.lname.value == '') {
+        document.getElementById("lspan").innerHTML = "lname is required";
+        flag = false;
+      }
+      if (form.email.value == '') {
+        document.getElementById("loginspan").innerHTML = "login id is required";
+        flag = false;
+      }
+      if (form.Pass.value == ''){
+        document.getElementById("passspan").innerHTML = "pass is required";
+        flag = false;
+      }
+      if (form.cnfirmpswd.value == ''){
+        document.getElementById("cpwd").innerHTML = "Confirmpass is required";
+        flag = false;
+      }
+      return flag;
+    }
+  </script>
+</head>
+
+<body> 
+  <p style="float:right"><img src="Rays images.png"></p>
+  <h4> Hi, Guest</h4>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+  <h1>
+    <center>
+      <th> User Registration </th>
+  </h1>
+  </center>
+  <br>
+  <br>
+  <center>
+    <form onsubmit="return validate(this)">
+      <table>
+        <tr>
+          <td> First Name*</td>
+          <td> <input type="text" name="fname"><span id="fspan"></span></td>
+        </tr>
+        <tr>
+          <td> Last Name*</td>
+          <td><input type="text" name="lname"><span id="lspan"></span></td>
+        </tr>
+        <tr>
+          <td> Email:*</td>
+          <td><input type="email" placeholder="must be mail id">
+          <span id="loginspan"></span></td>
+        </tr>
+        <tr>
+          <td> Password*</td>
+          <td><input type="password" name="pass"><span id="passspan"></span></td>
+        </tr>
+        <tr>
+          <td> Confirm Password*</td>
+          <td><input type="Confirmpassword" name ="cnfirmpswd"><span id="cpwd"></span></td>
+        </tr>
+        <tr>
+          <td> Gender*</td>
+          <td><select>
+              <option value="0">Male</option>
+              <option value="1">Female</option>
+            </select></td>
+          </tr>
+        <tr>
+          <td> Date of Birth*</td>
+          <td> <input type="date"><span id="DOB"></span></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Submit"></td>
+        </tr>
+      </table>
+    </form>
+  </center>
+  <hr>
+  <h5>
+    <center> © Copyright SunilOS Infotech Pvt Ltd.</center>
+  </h5>
+</body>
+</html>

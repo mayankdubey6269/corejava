@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(frm) {
+            var flag = true;
+            if (frm.login.value == '') {
+                document.getElementById("lspan").innerHTML = "login is required";
+                document.getElementById("lspan").style.color="red";
+                flag = false;
+            }
+            if (frm.password.value == '') {
+                document.getElementById("pspan").innerHTML = "password is required";
+                document.getElementById("pspan").style.color="red";
+                flag = false;
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        LoginId*
+        <input type="text" name="login"><span id="lspan"></span>
+
+        <br>
+        Password*
+        <input type="password" name="password"><span id="pspan"></span>
+        <br>
+        <input name="btn" type="submit" onclick="return validate(this.form)">
+    </form>
+</body>
+
+</html>
